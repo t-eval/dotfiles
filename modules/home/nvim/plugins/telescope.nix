@@ -10,7 +10,7 @@
           action = "find_files";
           options.desc = "Telescope find_files";
         };
-        "<leader>gp" = {
+        "<leader>tp" = {
           action = "git_files";
           options.desc = "Telescope git_files";
         };
