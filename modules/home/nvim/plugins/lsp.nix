@@ -27,7 +27,7 @@
 
       servers = {
         # Always have
-        nil-ls.enable = true;
+        nil_ls.enable = true;
 
         # Use with nix develop
         clangd = {
@@ -44,7 +44,7 @@
           package = null;
           settings = { build_on_save = true; };
         };
-        rust-analyzer = {
+        rust_analyzer = {
           enable = true;
           package = null;
           installCargo = false;
