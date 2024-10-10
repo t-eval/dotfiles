@@ -4,7 +4,11 @@
   system = {
     stateVersion = 5;
     defaults.CustomSystemPreferences = {
-      "com.apple.AdLib" = { allowApplePersonalizedAdvertising = false; };
+      "com.apple.AdLib" = {
+        allowApplePersonalizedAdvertising = false;
+        allowAssistant = false;
+      };
+      "com.apple.ImageCapture".disableHotPlug = true;
     };
   };
 

@@ -28,8 +28,10 @@ in {
 
     system = {
 
-      keyboard.enableKeyMapping = true;
-      keyboard.remapCapsLockToEscape = true;
+      keyboard = {
+        enableKeyMapping = true;
+        remapCapsLockToEscape = true;
+      };
 
       defaults = {
         loginwindow = {
@@ -42,7 +44,15 @@ in {
           AppleInterfaceStyleSwitchesAutomatically = false;
           AppleMeasurementUnits = "Centimeters";
           AppleTemperatureUnit = "Celsius";
+          NSAutomaticCapitalizationEnabled = false;
+          NSDocumentSaveNewDocumentsToCloud = false;
+          NSScrollAnimationEnabled = true;
           _HIHideMenuBar = false;
+        };
+
+        WindowManager = {
+          StandardHideDesktopIcons = true;
+          StandardHideWidgets = true;
         };
 
         SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;

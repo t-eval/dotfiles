@@ -1,10 +1,10 @@
-{ ... }: {
+{ pkgs, ... }: {
 
   macos = {
     dock = {
       apps = [
-        "/Users/void/Applications/Home Manager Apps/Wezterm.app"
-        "/Users/void/Applications/Home Manager Apps/Obsidian.app"
+        "${pkgs.wezterm}/Applications/Wezterm.app"
+        "${pkgs.obsidian}/Applications/Obsidian.app"
         "/Applications/Safari.app"
       ];
 
