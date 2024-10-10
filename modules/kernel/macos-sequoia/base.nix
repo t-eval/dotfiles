@@ -19,13 +19,6 @@ in {
   };
 
   config = {
-    environment = {
-      variables = {
-        EDITOR = "nvim";
-        LANG = "ko_KR.UTF-8";
-      };
-    };
-
     system = {
 
       keyboard = {
@@ -34,22 +27,6 @@ in {
       };
 
       defaults = {
-        loginwindow = {
-          SHOWFULLNAME = false;
-          GuestEnabled = false;
-        };
-
-        NSGlobalDomain = {
-          AppleInterfaceStyle = "Dark";
-          AppleInterfaceStyleSwitchesAutomatically = false;
-          AppleMeasurementUnits = "Centimeters";
-          AppleTemperatureUnit = "Celsius";
-          NSAutomaticCapitalizationEnabled = false;
-          NSDocumentSaveNewDocumentsToCloud = false;
-          NSScrollAnimationEnabled = true;
-          _HIHideMenuBar = false;
-        };
-
         WindowManager = {
           StandardHideDesktopIcons = true;
           StandardHideWidgets = true;
@@ -71,6 +48,11 @@ in {
     environment = {
       shells = [ pkgs.zsh ];
       systemPackages = with pkgs; [ vim ];
+      variables = {
+        EDITOR = "nvim";
+        LANG = "ko_KR.UTF-8";
+      };
+
     };
   };
 }

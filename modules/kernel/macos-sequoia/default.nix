@@ -12,6 +12,13 @@
     };
   };
 
-  imports = [ ./dock.nix ./finder.nix ./base.nix ];
+  imports = [
+    ./dock.nix
+    ./finder.nix
+    ./base.nix
+    ./loginwindow.nix
+    ./clock.nix
+    ./globaldomain.nix
+  ];
 
 }
