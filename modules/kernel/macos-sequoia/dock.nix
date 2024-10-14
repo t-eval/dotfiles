@@ -33,26 +33,7 @@ in {
       show-recents = false;
       autohide = cfg.hide;
       persistent-apps = cfg.apps;
-      enable-spring-load-actions-on-all-items = false;
-      appswitcher-all-displays = false;
-      autohide-delay = 0.24;
-      autohide-time-modifier = 1.0;
-      dashboard-in-overlay = false;
-      expose-animation-duration = 1.0;
-      expose-group-by-app = true;
-      largesize = 16;
-      mouse-over-hilite-stack = false;
-      mru-spaces = true;
-      orientation = "bottom";
       persistent-others = cfg.folders;
-      show-process-indicators = true;
-      showhidden = false;
-      slow-motion-allowed = false;
-      static-only = false;
-      wvous-bl-corner = null;
-      wvous-br-corner = null;
-      wvous-tl-corner = null;
-      wvous-tr-corner = null;
     };
   };
 }
