@@ -22,16 +22,5 @@
     AppleShowScrollBars = "WhenScrolling";
     AppleSpacesSwitchOnActivate = true;
     AppleWindowTabbingMode = "fullscreen";
-    InitialKeyRepeat = 2;
-    KeyRepeat = 1;
-    NSAutomaticDashSubstitutionEnabled = false;
-    NSAutomaticInlinePredictionEnabled = true;
-    NSAutomaticPeriodSubstitutionEnabled = false;
-    NSAutomaticQuoteSubstitutionEnabled = true;
-    NSAutomaticSpellingCorrectionEnabled = true;
-    NSAutomaticWindowAnimationsEnabled = true;
-    NSDisableAutomaticTermination = null;
-    NSNavPanelExpandedStateForSaveMode = false;
-    NSNavPanelExpandedStateForSaveMode2 = false;
   };
 }

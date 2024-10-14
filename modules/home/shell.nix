@@ -12,5 +12,11 @@
       # Rest
       ls = "ls -al --color=auto";
     };
+    initExtraFirst = ''
+      RPROMP=""
+      setopt PROMPT_SUBST
+
+      PROMPT="[%F{red}%n%f@%F{red}%1~%f]# " 
+    '';
   };
 }
