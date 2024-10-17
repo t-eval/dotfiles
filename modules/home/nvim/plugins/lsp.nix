@@ -50,6 +50,10 @@
           installCargo = false;
           installRustc = false;
         };
+        jsonls = {
+          enable = true;
+          package = null;
+        };
       };
     };
   };

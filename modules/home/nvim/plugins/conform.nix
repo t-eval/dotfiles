@@ -7,7 +7,6 @@
         timeoutMs = 500;
         lspFallback = true;
       };
-    
 
       formatters_by_ft = {
         # Always have 
@@ -18,6 +17,7 @@
         rust = [ "rustfmt" ];
         c = [ "clang-format" ];
         go = [ "gofmt" ];
+        json = [ "fixjson" ];
       };
     };
   };
