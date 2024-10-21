@@ -28,12 +28,19 @@
       servers = {
         # Always have
         nil_ls.enable = true;
+        yamlls.enable = true;
 
         # Use with nix develop
         clangd = {
           enable = true;
           package = null;
-          settings = { init_options = { clangdFileStatus = true; }; };
+          cmd = [
+            "clangd"
+            "--background-index"
+            "--limit-results=500"
+            "--completion-style=detailed"
+            "--log=verbose"
+          ];
         };
         gopls = {
           enable = true;
