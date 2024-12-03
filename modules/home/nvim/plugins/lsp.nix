@@ -3,7 +3,7 @@
   programs.nixvim = {
 
     extraConfigLuaPost = ''
-      vim.diagnostic.config({ virtual_text = true })
+      vim.diagnostic.config({ virtual_text = false })
     '';
 
     plugins.lsp = {
@@ -44,6 +44,11 @@
         };
         gopls = {
           enable = true;
+          package = null;
+        };
+        metals = {
+          enable = true;
+          filetypes = [ "scala" "sbt" ];
           package = null;
         };
         zls = {

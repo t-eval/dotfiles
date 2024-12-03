@@ -18,6 +18,8 @@
         c = [ "clang-format" ];
         go = [ "gofmt" ];
         json = [ "fixjson" ];
+        scala = [ "scalafmt" ];
+        haskell = [ "hindent" ];
       };
     };
   };

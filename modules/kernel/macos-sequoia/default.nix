@@ -9,6 +9,16 @@
         allowAssistant = false;
       };
       "com.apple.ImageCapture".disableHotPlug = true;
+      "com.apple.Safari" = {
+        "com.apple.Safari.WarnAboutFraudulentWebsites" = true;
+        "com.apple.Safari.SearchProviderIdentifier" = "com.duckduckgo";
+        "com.apple.Safari.AutoFillPasswords" = false;
+        "com.apple.Safari.AutoFillCreditCardData" = false;
+        "com.apple.Safari.AutoFillMiscellaneousForms" = false;
+        "com.apple.Safari.IncludeDevelopMenu" = true;
+        "com.apple.Safari.WebKitDeveloperExtras" = true;
+        "com.apple.Safari.ShowFavoritesBar" = true;
+      };
     };
   };
 
