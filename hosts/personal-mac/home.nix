@@ -4,7 +4,7 @@
 
   home = {
     obsidian = {
-      enable = true;
+      enable = false;
       workspaces = [{
         name = "personal";
         path = "~/obsidian/personal";
