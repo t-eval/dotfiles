@@ -15,10 +15,8 @@ in {
 
   config = {
     nix = {
-      settings = {
-        experimental-features = "nix-command flakes";
-        auto-optimise-store = true;
-      };
+      optimise.automatic = true;
+      settings = { experimental-features = "nix-command flakes"; };
     };
 
     nixpkgs = {
