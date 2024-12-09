@@ -46,6 +46,12 @@
           enable = true;
           package = null;
         };
+        hls = {
+          enable = true;
+          package = null;
+          installGhc = false;
+          filetypes = [ "haskell" "cabal" ];
+        };
         metals = {
           enable = true;
           filetypes = [ "scala" "sbt" ];
