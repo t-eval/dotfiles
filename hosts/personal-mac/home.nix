@@ -11,9 +11,5 @@
       }];
     };
 
-    git = {
-      username = "tommasobruno";
-      email = "bruno.tommaso@protonmail.com";
-    };
   };
 }

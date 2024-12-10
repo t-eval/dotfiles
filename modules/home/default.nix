@@ -2,6 +2,7 @@
 
   # Allow home-manager to manage itself
   programs.home-manager.enable = true;
+  xdg.enable = true;
 
   # Basic home-manager settings
   home = {
