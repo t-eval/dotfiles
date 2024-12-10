@@ -10,5 +10,5 @@
     stateVersion = "24.11";
   };
 
-  imports = [ ./git.nix ./shell.nix ./wezterm.nix ./nvim ./cli.nix ];
+  imports = [ ./git.nix ./shell.nix ./wezterm.nix ./nvim ];
 }
