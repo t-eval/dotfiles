@@ -29,6 +29,9 @@ return {
 				live_grep = {
 					theme = "ivy",
 				},
+				lsp_definitions = {
+					theme = "ivy",
+				},
 			},
 			extensions = {
 				fzf = {

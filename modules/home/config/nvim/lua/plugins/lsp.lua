@@ -43,7 +43,8 @@ return {
 
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
-				{ name = "buffer" },
+				{ name = "luasnip" },
+				{ name = "buffer", keyword_length = 4 },
 			}),
 		})
 
@@ -64,9 +65,29 @@ return {
 
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+		local on_attach = function(_, bufnr)
+			local bufopts = { noremap = true, silent = true, buffer = bufnr }
+
+			-- Telescope/LSP keymaps
+			local builtin = require("telescope.builtin")
+			vim.keymap.set("n", "<leader>gd", builtin.lsp_definitions, bufopts)
+			vim.keymap.set("n", "<leader>gr", builtin.lsp_references, bufopts)
+
+			-- LSP keymaps
+			vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, bufopts)
+			vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, bufopts)
+			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
+			vim.keymap.set("n", "<leader>ct", vim.lsp.buf.type_definition, bufopts)
+		end
+
+		vim.diagnostic.config({ virtual_text = true, virtual_lines = false })
+
 		for name, config in pairs(servers) do
-			local lsp_config =
-				vim.tbl_deep_extend("force", config, { capabilities = capabilities })
+			local lsp_config = vim.tbl_deep_extend(
+				"force",
+				config,
+				{ capabilities = capabilities, on_attach = on_attach }
+			)
 
 			lsp[name].setup(lsp_config)
 		end
