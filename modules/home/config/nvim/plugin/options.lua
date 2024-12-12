@@ -21,3 +21,5 @@ opt.shiftwidth = 2
 
 opt.more = false
 opt.foldmethod = "manual"
+
+opt.completeopt = { "menu", "menuone", "noselect" }
