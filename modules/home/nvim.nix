@@ -7,12 +7,27 @@
   };
 
   # Language servers, formatters
-  home.packages = with pkgs; [ 
+  home.packages = with pkgs; [
 
-		# Lua
-		lua-language-server 
-		stylua 
-  
+    # Lua
+    lua-language-server
+    stylua
+    lua
+
+    # Haskell
+    haskellPackages.haskell-language-server
+    haskellPackages.hindent
+    haskellPackages.cabal-install
+    ghc
+
+    # Nix
+    nil
+    nixfmt-classic
+
+    # Zig
+    zig
+    zls
+
   ];
 
   xdg.configFile."nvim" = {

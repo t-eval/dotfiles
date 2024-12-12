@@ -49,6 +49,7 @@ return {
 		})
 
 		local servers = {
+			nil_ls = {},
 			lua_ls = {
 				settings = {
 					Lua = {
@@ -60,6 +61,16 @@ return {
 						},
 					},
 				},
+			},
+			zls = {
+				settings = {
+					zls = {
+						enable_build_on_save = true,
+					},
+				},
+			},
+			hls = {
+				filetypes = { "haskell", "cabal" },
 			},
 		}
 
@@ -77,7 +88,12 @@ return {
 			vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, bufopts)
 			vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, bufopts)
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
-			vim.keymap.set("n", "<leader>ct", vim.lsp.buf.type_definition, bufopts)
+			vim.keymap.set(
+				"n",
+				"<leader>ct",
+				vim.lsp.buf.type_definition,
+				bufopts
+			)
 		end
 
 		vim.diagnostic.config({ virtual_text = true, virtual_lines = false })

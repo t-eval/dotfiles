@@ -16,8 +16,8 @@ opt.signcolumn = "yes"
 opt.wrap = true
 opt.linebreak = true
 
-opt.tabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.shiftwidth = 4
 
 opt.more = false
 opt.foldmethod = "manual"
