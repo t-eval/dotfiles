@@ -18,7 +18,7 @@
             useUserPackages = true;
             users.${hostname} = {
               imports = [
-                inputs.nixvim.homeManagerModules.nixvim
+                #inputs.nixvim.homeManagerModules.nixvim
                 home-modules
                 homeModule
               ];

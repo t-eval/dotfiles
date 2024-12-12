@@ -1,0 +1,8 @@
+syntax = "All"
+indent_type = "Tabs"
+indent_width = 1
+collapse_simple_statement = "Never"
+space_after_function_names = "Never"
+call_parentheses = "Always"
+quote_style = "AutoPreferDouble"
+column_width = 80
