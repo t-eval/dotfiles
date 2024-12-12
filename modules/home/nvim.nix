@@ -13,6 +13,7 @@
     lua-language-server
     stylua
     lua
+    luajitPackages.luarocks
 
     # Haskell
     haskellPackages.haskell-language-server
