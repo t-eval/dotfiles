@@ -29,7 +29,7 @@ return {
 				live_grep = {
 					theme = "ivy",
 				},
-				lsp_definitions = {
+				lsp_references = {
 					theme = "ivy",
 				},
 			},
