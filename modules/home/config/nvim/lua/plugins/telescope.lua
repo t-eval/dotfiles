@@ -19,8 +19,16 @@ return {
 	end,
 	config = function()
 		require("telescope").setup({
-			defaults = {
-				theme = "ivy",
+			pickers = {
+				find_files = {
+					theme = "ivy",
+				},
+				git_files = {
+					theme = "ivy",
+				},
+				live_grep = {
+					theme = "ivy",
+				},
 			},
 			extensions = {
 				fzf = {
