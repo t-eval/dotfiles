@@ -3,7 +3,7 @@ return {
 	build = ":TSUpdate",
 	main = "nvim-treesitter.configs",
 	opts = {
-		ensure_installed = { "lua", "nix", "zig" },
+		ensure_installed = { "lua", "nix", "zig", "haskell" },
 
 		auto_install = false,
 		highlight = {
