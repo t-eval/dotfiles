@@ -15,20 +15,9 @@
     lua
     luajitPackages.luarocks
 
-    # Haskell
-    haskellPackages.haskell-language-server
-    haskellPackages.hindent
-    haskellPackages.cabal-install
-    ghc
-
     # Nix
     nil
     nixfmt-classic
-
-    # Zig
-    zig
-    zls
-
   ];
 
   xdg.configFile."nvim" = {
