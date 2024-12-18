@@ -1,3 +1,0 @@
-[submodule "modules/home/config/ada"]
-	path = modules/home/config/ada
-	url = git@github.com:voidkrc/ada.git
