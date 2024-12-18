@@ -69,6 +69,7 @@ return {
 					},
 				},
 			},
+			clangd = {},
 			hls = {
 				filetypes = { "haskell", "cabal" },
 			},

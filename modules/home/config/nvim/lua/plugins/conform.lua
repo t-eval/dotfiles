@@ -6,6 +6,7 @@ return {
 			haskell = { "hindent" },
 			nix = { "nixfmt" },
 			zig = { "zigfmt" },
+			c = { "clang-format" },
 		},
 		format_on_save = {
 			timeout_ms = 500,
