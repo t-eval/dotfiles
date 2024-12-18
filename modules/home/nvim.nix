@@ -22,6 +22,6 @@
 
   xdg.configFile."nvim" = {
     recursive = true;
-    source = ./coding/ada;
+    source = ./config/ada;
   };
 }
