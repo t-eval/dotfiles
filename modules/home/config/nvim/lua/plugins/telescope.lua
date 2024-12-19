@@ -18,20 +18,14 @@ return {
 		}
 	end,
 	config = function()
+		local default_opt = { theme = "ivy", disable_devicons = true }
+
 		require("telescope").setup({
 			pickers = {
-				find_files = {
-					theme = "ivy",
-				},
-				git_files = {
-					theme = "ivy",
-				},
-				live_grep = {
-					theme = "ivy",
-				},
-				lsp_references = {
-					theme = "ivy",
-				},
+				find_files = default_opt,
+				git_files = default_opt,
+				live_grep = default_opt,
+				lsp_references = default_opt,
 			},
 			extensions = {
 				fzf = {
