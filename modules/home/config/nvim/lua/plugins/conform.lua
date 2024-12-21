@@ -7,6 +7,7 @@ return {
 			nix = { "nixfmt" },
 			zig = { "zigfmt" },
 			c = { "clang-format" },
+			cpp = { "clang-format" },
 		},
 		format_on_save = {
 			timeout_ms = 500,

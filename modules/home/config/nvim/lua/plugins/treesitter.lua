@@ -4,7 +4,7 @@ return {
 	build = ":TSUpdate",
 	main = "nvim-treesitter.configs",
 	opts = {
-		ensure_installed = { "lua", "nix", "zig", "haskell", "cmake", "c" },
+		ensure_installed = { "lua", "nix", "zig", "haskell", "cmake", "c", "cpp" },
 
 		auto_install = false,
 		highlight = {
