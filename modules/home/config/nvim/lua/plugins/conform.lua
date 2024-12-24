@@ -8,6 +8,7 @@ return {
 			zig = { "zigfmt" },
 			c = { "clang-format" },
 			cpp = { "clang-format" },
+			yaml = { "yamlfix" },
 		},
 		format_on_save = {
 			timeout_ms = 500,

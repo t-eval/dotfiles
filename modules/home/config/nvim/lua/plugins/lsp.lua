@@ -8,6 +8,7 @@ return {
 
 		local servers = {
 			nil_ls = {},
+			yamlls = {},
 			lua_ls = {
 				settings = {
 					Lua = {

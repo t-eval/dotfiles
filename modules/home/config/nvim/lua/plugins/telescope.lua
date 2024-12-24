@@ -15,6 +15,7 @@ return {
 			{ "<leader>fw", builtin.live_grep, desc = "Live Grep" },
 			{ "<leader>fd", builtin.find_files, desc = "Find files" },
 			{ "<leader>fg", builtin.git_files, desc = "Find git files" },
+			{ "<leader>fb", builtin.git_branches, desc = "Find git branches" },
 		}
 	end,
 	config = function()
