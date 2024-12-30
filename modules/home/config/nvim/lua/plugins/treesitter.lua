@@ -13,6 +13,7 @@ return {
 			"c",
 			"cpp",
 			"yaml",
+			"glsl",
 		},
 
 		auto_install = false,
