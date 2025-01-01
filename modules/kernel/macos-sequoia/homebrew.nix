@@ -6,7 +6,7 @@ in {
     macos.homebrew = with types; {
       casks = mkOption {
         type = listOf str;
-        description = "Which casks to install with hombrew";
+        description = "Which casks to install with homebrew";
       };
     };
   };
