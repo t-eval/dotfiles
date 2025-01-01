@@ -27,9 +27,9 @@ config.keys = {
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 1
 
-config.font = wezterm.font("Berkeley Mono")
+config.font = wezterm.font("Berkeley Mono", { weight = "Bold" })
 config.font_size = 13
-config.front_end = "WebGpu"
+--config.front_end = "WebGpu"
 config.use_fancy_tab_bar = false
 config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true

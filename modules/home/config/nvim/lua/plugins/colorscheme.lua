@@ -11,11 +11,12 @@ return {
     "ellisonleao/gruvbox.nvim",
     priority = 1000,
     init = function()
-      vim.o.background = "dark"
       vim.cmd("colorscheme gruvbox")
     end,
     opts = {
+      terminal_colors = true,
       contrast = "hard",
+      transparent_mode = false,
       overrides = {
         SignColumn = { bg = "NONE" },
       },

@@ -10,6 +10,7 @@
       modules = [
         nix-modules
         nixModule
+        inputs.nix-homebrew.darwinModules.nix-homebrew
         inputs.home-manager.darwinModules.home-manager
         {
           users.users.${hostname}.home = "/Users/${hostname}";
