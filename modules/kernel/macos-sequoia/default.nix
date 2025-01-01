@@ -29,6 +29,7 @@
     ./loginwindow.nix
     ./clock.nix
     ./globaldomain.nix
+    ./homebrew.nix
   ];
 
 }
