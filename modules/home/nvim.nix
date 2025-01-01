@@ -8,6 +8,8 @@
 
   # Language servers, formatters
   home.packages = with pkgs; [
+    # Tools
+    ripgrep
 
     # Lua
     lua-language-server

@@ -1,7 +1,5 @@
 { ... }: {
 
-  imports = [ ./software.nix ];
-
   home = {
     git = {
       username = "tommasobruno";
