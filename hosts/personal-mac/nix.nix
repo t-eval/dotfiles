@@ -1,5 +1,1 @@
-{ ... }:
-{
-
-  #  nix.unfree_apps = [ "obsidian" ];
-}
+{ ... }: { nix.unfree_apps = [ "obsidian" ]; }

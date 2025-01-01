@@ -4,24 +4,24 @@ local config = {}
 local mux = wezterm.mux
 
 wezterm.on("gui-startup", function()
-	local _, _, window = mux.spawn_window({})
-	window:gui_window():maximize()
+  local _, _, window = mux.spawn_window({})
+  window:gui_window():maximize()
 end)
 
 if wezterm.config_builder() then
-	config = wezterm.config_builder()
+  config = wezterm.config_builder()
 end
 
 config.colors = {
-	background = "#111111",
+  background = "#111111",
 }
 
 config.keys = {
-	{
-		key = "k",
-		mods = "CMD",
-		action = wezterm.action.ClearScrollback("ScrollbackAndViewport"),
-	},
+  {
+    key = "k",
+    mods = "CMD",
+    action = wezterm.action.ClearScrollback("ScrollbackAndViewport"),
+  },
 }
 
 config.window_decorations = "RESIZE"
