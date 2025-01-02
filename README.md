@@ -1,2 +1,2 @@
-# .system
+# ada
 My systems' configurations
