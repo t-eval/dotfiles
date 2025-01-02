@@ -19,40 +19,13 @@ in {
   };
 
   config = {
-    system = {
-
-      keyboard = {
-        enableKeyMapping = true;
-        remapCapsLockToEscape = true;
-      };
-
-      defaults = {
-        WindowManager = {
-          StandardHideDesktopIcons = true;
-          StandardHideWidgets = true;
-        };
-
-        SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;
-        screencapture = {
-          location = "~/Pictures";
-          show-thumbnail = false;
-          type = "png";
-        };
-      };
-    };
-
     time.timeZone = cfg.timeZone;
     security.pam.enableSudoTouchIdAuth = cfg.useTouchIdForSudo;
 
     programs.zsh.enable = true;
     environment = {
       shells = [ pkgs.zsh ];
-      systemPackages = with pkgs; [ vim ];
-      variables = {
-        EDITOR = "nvim";
-        LANG = "ko_KR.UTF-8";
-      };
-
+      systemPackages = with pkgs; [ vim appcleaner ];
     };
   };
 }

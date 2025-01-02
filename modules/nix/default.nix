@@ -14,8 +14,10 @@ in {
   };
 
   config = {
+    services.nix-daemon.enable = true;
     nix = {
       optimise.automatic = true;
+      gc.automatic = true;
       settings = { experimental-features = "nix-command flakes"; };
     };
 

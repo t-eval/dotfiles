@@ -17,13 +17,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.${hostname} = {
-              imports = [
-                #inputs.nixvim.homeManagerModules.nixvim
-                home-modules
-                homeModule
-              ];
-            };
+            users.${hostname} = { imports = [ home-modules homeModule ]; };
           };
         }
         kernel-modules
