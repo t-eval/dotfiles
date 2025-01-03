@@ -8,8 +8,8 @@ with lib; let
 in {
   options = {
     home.terminal = {
-      ghostty = mkEnableOption "ghostty";
-      wezterm = mkEnableOption "wezterm";
+      ghostty = mkEnableOption "Whether to enable ghostty terminal";
+      wezterm = mkEnableOption "Whether to enable wezterm terminal";
     };
   };
 

@@ -17,7 +17,7 @@
     luajitPackages.luarocks
 
     # Nix
-    nil
+    nixd
     alejandra
   ];
 

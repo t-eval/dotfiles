@@ -11,7 +11,10 @@
     nix-modules = import ../modules/nix;
   in
     inputs.nix-darwin.lib.darwinSystem {
-      specialArgs = {inherit system;};
+      specialArgs = {
+        inherit system;
+        nixpkgs = inputs.nixpkgs;
+      };
       modules = [
         nix-modules
         nixModule

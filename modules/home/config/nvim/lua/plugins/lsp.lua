@@ -7,7 +7,15 @@ return {
     local lsp = require("lspconfig")
 
     local servers = {
-      nil_ls = {},
+      nixd = {
+        settings = {
+          nixd = {
+            nixpkgs = {
+              expr = "import <nixpkgs> { }",
+            },
+          },
+        },
+      },
       yamlls = {},
       lua_ls = {
         settings = {

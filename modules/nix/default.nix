@@ -2,6 +2,7 @@
   lib,
   config,
   system,
+  nixpkgs,
   ...
 }:
 with lib; let
@@ -24,6 +25,7 @@ in {
       optimise.automatic = true;
       gc.automatic = true;
       settings = {experimental-features = "nix-command flakes";};
+      nixPath = ["nixpkgs=${nixpkgs}"];
     };
 
     nixpkgs = {
