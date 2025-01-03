@@ -6,10 +6,14 @@
       # Nix
       nixs = "/run/current-system/sw/bin/darwin-rebuild switch --flake ~/coding/ada#personal";
       nd = "nix develop -c $SHELL";
+      nb = "nix build";
 
       # Rest
       ls = "ls -al --color=auto";
     };
+
+    syntaxHighlighting.enable = true;
+
     initExtraFirst = ''
       RPROMP=""
       setopt PROMPT_SUBST
