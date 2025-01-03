@@ -1,6 +1,11 @@
-{ pkgs, lib, config, ... }:
-with lib;
-let cfg = config.macos.base;
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+with lib; let
+  cfg = config.macos.base;
 in {
   options = {
     macos.base = with types; {
@@ -24,8 +29,8 @@ in {
 
     programs.zsh.enable = true;
     environment = {
-      shells = [ pkgs.zsh ];
-      systemPackages = with pkgs; [ vim appcleaner ];
+      shells = [pkgs.zsh];
+      systemPackages = with pkgs; [vim appcleaner];
     };
   };
 }

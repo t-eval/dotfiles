@@ -1,12 +1,17 @@
-{ inputs, ... }: {
-  mkMacOS = { macModule, homeModule, nixModule, system, hostname }:
-    let
-      kernel-modules = import ../modules/kernel;
-      home-modules = import ../modules/home;
-      nix-modules = import ../modules/nix;
-
-    in inputs.nix-darwin.lib.darwinSystem {
-      specialArgs = { inherit system; };
+{inputs, ...}: {
+  mkMacOS = {
+    macModule,
+    homeModule,
+    nixModule,
+    system,
+    hostname,
+  }: let
+    kernel-modules = import ../modules/kernel;
+    home-modules = import ../modules/home;
+    nix-modules = import ../modules/nix;
+  in
+    inputs.nix-darwin.lib.darwinSystem {
+      specialArgs = {inherit system;};
       modules = [
         nix-modules
         nixModule
@@ -17,7 +22,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.${hostname} = { imports = [ home-modules homeModule ]; };
+            users.${hostname} = {imports = [home-modules homeModule];};
           };
         }
         kernel-modules

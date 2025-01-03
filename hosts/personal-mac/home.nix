@@ -1,5 +1,4 @@
-{ ... }: {
-
+{...}: {
   home = {
     git = {
       username = "tommasobruno";

@@ -1,1 +1,1 @@
-{ ... }: { imports = [ ./macos-sequoia ]; }
+{...}: {imports = [./macos-sequoia];}

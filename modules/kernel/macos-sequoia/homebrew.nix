@@ -1,6 +1,10 @@
-{ lib, config, ... }:
-with lib;
-let cfg = config.macos.homebrew;
+{
+  lib,
+  config,
+  ...
+}:
+with lib; let
+  cfg = config.macos.homebrew;
 in {
   options = {
     macos.homebrew = with types; {
@@ -30,4 +34,3 @@ in {
     };
   };
 }
-

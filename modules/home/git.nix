@@ -1,8 +1,11 @@
-{ lib, config, ... }:
-with lib;
-let cfg = config.home.git;
+{
+  lib,
+  config,
+  ...
+}:
+with lib; let
+  cfg = config.home.git;
 in {
-
   options = {
     home.git = with types; {
       username = mkOption {

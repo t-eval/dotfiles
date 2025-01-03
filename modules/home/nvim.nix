@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   programs.neovim = {
     enable = true;
     viAlias = true;
@@ -19,7 +18,7 @@
 
     # Nix
     nil
-    nixfmt-classic
+    alejandra
   ];
 
   xdg.configFile."nvim" = {

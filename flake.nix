@@ -17,21 +17,21 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
   };
 
-  outputs = { nixpkgs, ... }@inputs:
-    let
-      macosLib = import ./lib/mkMacOS.nix { inherit inputs; };
+  outputs = {nixpkgs, ...} @ inputs: let
+    macosLib = import ./lib/mkMacOS.nix {inherit inputs;};
 
-      personal-laptop-system = "aarch64-darwin";
-
-    in {
-      darwinConfigurations = with macosLib; {
-        personal = mkMacOS {
-          macModule = ./hosts/personal-mac/kernel.nix;
-          homeModule = ./hosts/personal-mac/home.nix;
-          nixModule = ./hosts/personal-mac/nix.nix;
-          system = personal-laptop-system;
-          hostname = "void";
-        };
+    personal-laptop-system = "aarch64-darwin";
+  in {
+    darwinConfigurations = with macosLib; {
+      personal = mkMacOS {
+        macModule = ./hosts/personal-mac/kernel.nix;
+        homeModule = ./hosts/personal-mac/home.nix;
+        nixModule = ./hosts/personal-mac/nix.nix;
+        system = personal-laptop-system;
+        hostname = "void";
       };
     };
+
+    formatter.${personal-laptop-system} = nixpkgs.legacyPackages.${personal-laptop-system}.alejandra;
+  };
 }

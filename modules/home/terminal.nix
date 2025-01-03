@@ -1,6 +1,10 @@
-{ lib, config, ... }:
-with lib;
-let cfg = config.home.terminal;
+{
+  lib,
+  config,
+  ...
+}:
+with lib; let
+  cfg = config.home.terminal;
 in {
   options = {
     home.terminal = {
@@ -10,7 +14,6 @@ in {
   };
 
   config = {
-
     # Wezterm
     programs.wezterm = lib.mkIf cfg.wezterm {
       enable = false;
@@ -29,4 +32,3 @@ in {
     };
   };
 }
-

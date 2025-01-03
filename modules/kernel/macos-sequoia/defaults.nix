@@ -1,8 +1,11 @@
-{ lib, config, ... }:
-with lib;
-let cfg_dock = config.macos.dock;
+{
+  lib,
+  config,
+  ...
+}:
+with lib; let
+  cfg_dock = config.macos.dock;
 in {
-
   options = {
     macos = {
       dock = with types; {
@@ -14,7 +17,7 @@ in {
         folders = mkOption {
           type = listOf str;
           description = "Which folders to always show in the dock";
-          default = [ ];
+          default = [];
         };
 
         hide = mkOption {
@@ -101,4 +104,3 @@ in {
     };
   };
 }
-

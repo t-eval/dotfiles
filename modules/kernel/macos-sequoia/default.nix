@@ -1,5 +1,4 @@
-{ ... }: {
-
+{...}: {
   system = {
     stateVersion = 5;
     keyboard = {
@@ -8,5 +7,5 @@
     };
   };
 
-  imports = [ ./base.nix ./homebrew.nix ./defaults.nix ];
+  imports = [./base.nix ./homebrew.nix ./defaults.nix];
 }
