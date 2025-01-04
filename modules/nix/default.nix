@@ -3,6 +3,7 @@
   config,
   system,
   nixpkgs,
+  nur,
   ...
 }:
 with lib; let
@@ -32,6 +33,7 @@ in {
       hostPlatform = system;
       config.allowUnfreePredicate = pkg:
         builtins.elem (getName pkg) cfg.unfree_apps;
+      overlays = [nur.overlays.default];
     };
   };
 }

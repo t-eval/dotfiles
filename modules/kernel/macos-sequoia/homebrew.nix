@@ -30,7 +30,7 @@ in {
         cleanup = "zap";
         upgrade = true;
       };
-      casks = cfg.casks;
+      casks = cfg.casks ++ ["firefox@developer-edition"];
     };
   };
 }

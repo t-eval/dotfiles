@@ -14,6 +14,7 @@
       specialArgs = {
         inherit system;
         nixpkgs = inputs.nixpkgs;
+        nur = inputs.nur;
       };
       modules = [
         nix-modules

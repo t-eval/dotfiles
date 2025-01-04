@@ -13,5 +13,5 @@
     };
   };
 
-  imports = [./git.nix ./shell.nix ./nvim.nix ./terminal.nix];
+  imports = [./git.nix ./shell.nix ./nvim.nix ./terminal.nix ./internet];
 }
