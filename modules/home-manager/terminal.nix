@@ -21,13 +21,13 @@ in {
     };
 
     xdg.configFile."wezterm" = lib.mkIf cfg.wezterm {
-      source = ./config/wezterm;
+      source = ./dotfiles/wezterm;
       recursive = true;
     };
 
     # Ghostty
     xdg.configFile."ghostty" = lib.mkIf cfg.ghostty {
-      source = ./config/ghostty;
+      source = ./dotfiles/ghostty;
       recursive = true;
     };
   };

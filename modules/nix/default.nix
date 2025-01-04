@@ -2,8 +2,7 @@
   lib,
   config,
   system,
-  nixpkgs,
-  nur,
+  inputs,
   ...
 }:
 with lib; let
@@ -26,14 +25,14 @@ in {
       optimise.automatic = true;
       gc.automatic = true;
       settings = {experimental-features = "nix-command flakes";};
-      nixPath = ["nixpkgs=${nixpkgs}"];
+      nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     };
 
     nixpkgs = {
       hostPlatform = system;
       config.allowUnfreePredicate = pkg:
         builtins.elem (getName pkg) cfg.unfree_apps;
-      overlays = [nur.overlays.default];
+      overlays = [inputs.nur.overlays.default];
     };
   };
 }

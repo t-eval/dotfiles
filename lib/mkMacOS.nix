@@ -7,14 +7,12 @@
     hostname,
   }: let
     kernel-modules = import ../modules/kernel;
-    home-modules = import ../modules/home;
+    home-modules = import ../modules/home-manager;
     nix-modules = import ../modules/nix;
   in
     inputs.nix-darwin.lib.darwinSystem {
       specialArgs = {
-        inherit system;
-        nixpkgs = inputs.nixpkgs;
-        nur = inputs.nur;
+        inherit system inputs;
       };
       modules = [
         nix-modules

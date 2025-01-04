@@ -29,9 +29,9 @@
   in {
     darwinConfigurations = with macosLib; {
       personal = mkMacOS {
-        macModule = ./hosts/personal-mac/kernel.nix;
-        homeModule = ./hosts/personal-mac/home.nix;
-        nixModule = ./hosts/personal-mac/nix.nix;
+        macModule = ./machines/personal-mac/kernel.nix;
+        homeModule = ./machines/personal-mac/home.nix;
+        nixModule = ./machines/personal-mac/nix.nix;
         system = personal-laptop-system;
         hostname = "void";
       };
