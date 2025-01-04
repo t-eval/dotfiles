@@ -8,6 +8,23 @@
         name = "void";
         settings = import ./settings.nix;
 
+        bookmarks = [
+          {
+            name = "Default";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "Github";
+                url = "https://www.github.com";
+              }
+              {
+                name = "Sheets";
+                url = "https://docs.google.com/spreadsheets";
+              }
+            ];
+          }
+        ];
+
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           ublock-origin
           proton-pass
