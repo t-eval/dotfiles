@@ -6,7 +6,7 @@
     system,
     hostname,
   }: let
-    kernel-modules = import ../modules/kernel;
+    kernel-modules = import ../modules/nix-darwin;
     home-modules = import ../modules/home-manager;
     nix-modules = import ../modules/nix;
   in
