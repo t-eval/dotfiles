@@ -2,13 +2,12 @@
   mkMacOS = {
     macModule,
     homeModule,
-    nixModule,
     system,
     hostname,
   }: let
     kernel-modules = import ../modules/nix-darwin;
     home-modules = import ../modules/home-manager;
-    nix-modules = import ../modules/nix;
+    nix-modules = import ../modules/nix-core;
   in
     inputs.nix-darwin.lib.darwinSystem {
       specialArgs = {
@@ -16,7 +15,6 @@
       };
       modules = [
         nix-modules
-        nixModule
         inputs.nix-homebrew.darwinModules.nix-homebrew
         inputs.home-manager.darwinModules.home-manager
         {
@@ -25,6 +23,10 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             users.${hostname} = {imports = [home-modules homeModule];};
+            extraSpecialArgs = {
+              # ghostty = inputs.ghostty;
+              inherit system;
+            };
           };
         }
         kernel-modules

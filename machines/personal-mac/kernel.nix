@@ -5,6 +5,6 @@
       hide = true;
     };
 
-    homebrew = {casks = ["ghostty"];};
+    homebrew.casks = ["ghostty"];
   };
 }

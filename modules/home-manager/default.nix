@@ -1,9 +1,7 @@
 {...}: {
-  # Allow home-manager to manage itself
   programs.home-manager.enable = true;
   xdg.enable = true;
 
-  # Basic home-manager settings
   home = {
     sessionPath = ["/opt/homebrew/bin"];
     stateVersion = "24.11";
@@ -13,5 +11,5 @@
     };
   };
 
-  imports = [./git.nix ./shell.nix ./nvim.nix ./terminal.nix ./internet];
+  imports = [./git.nix ./shell.nix ./nvim.nix ./dev-env ./internet];
 }

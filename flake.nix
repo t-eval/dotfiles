@@ -16,6 +16,8 @@
 
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
+    # ghostty.url = "github:ghostty-org/ghostty";
+
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,7 +33,6 @@
       personal = mkMacOS {
         macModule = ./machines/personal-mac/kernel.nix;
         homeModule = ./machines/personal-mac/home.nix;
-        nixModule = ./machines/personal-mac/nix.nix;
         system = personal-laptop-system;
         hostname = "void";
       };
