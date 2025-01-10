@@ -1,8 +1,7 @@
 {...}: {
   macos = {
     dock = {
-      apps = ["/Applications/Ghostty.app"];
-      hide = true;
+      persistent-apps = ["/Applications/Ghostty.app"];
     };
 
     homebrew.casks = ["ghostty"];

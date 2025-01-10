@@ -47,6 +47,10 @@
 
   ## TODO: Check how to remove the engines suggestion when searching.
 
+  "signon.autofillForms" = false;
+  "signon.rememberSignons" = false;
+  "signon.rememberSignons.visibilityToggle" = false;
+
   "intl.accept_languages" = "en-US,en"; # English
   "services.sync.prefs.sync.layout.spellcheckDefault" = false; # Do not spell-check
   "layout.spellcheckDefault" = 0; # Do not spell-check

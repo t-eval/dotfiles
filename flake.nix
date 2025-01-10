@@ -24,8 +24,12 @@
     };
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
-    macosLib = import ./lib/mkMacOS.nix {inherit inputs;};
+  outputs = {
+    nixpkgs,
+    self,
+    ...
+  } @ inputs: let
+    macosLib = import ./lib/mkMacOS.nix {inherit self inputs;};
 
     personal-laptop-system = "aarch64-darwin";
   in {
@@ -33,11 +37,15 @@
       personal = mkMacOS {
         macModule = ./machines/personal-mac/kernel.nix;
         homeModule = ./machines/personal-mac/home.nix;
-        system = personal-laptop-system;
         hostname = "void";
+        system = personal-laptop-system;
       };
     };
 
     formatter.${personal-laptop-system} = nixpkgs.legacyPackages.${personal-laptop-system}.alejandra;
+
+    darwinModules = import ./modules/nix-darwin;
+    homeModules = import ./modules/home-manager;
+    nixCommon = import ./modules/nix-core;
   };
 }

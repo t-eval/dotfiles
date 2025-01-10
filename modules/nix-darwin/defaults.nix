@@ -9,20 +9,16 @@ in {
   options = {
     macos = {
       dock = with types; {
-        apps = mkOption {
+        persistent-apps = mkOption {
           type = listOf str;
           description = "Which apps to always show in the dock";
-        };
-
-        folders = mkOption {
-          type = listOf str;
-          description = "Which folders to always show in the dock";
           default = [];
         };
 
-        hide = mkOption {
-          type = bool;
-          description = "Whether to automatically hide the dock";
+        persistent-folders = mkOption {
+          type = listOf str;
+          description = "Which folders to always show in the dock";
+          default = [];
         };
       };
     };
@@ -84,9 +80,9 @@ in {
         mineffect = null;
         tilesize = 48;
         show-recents = false;
-        autohide = cfg_dock.hide;
-        persistent-apps = cfg_dock.apps ++ ["/Applications/Firefox Developer Edition.app"];
-        persistent-others = cfg_dock.folders;
+        autohide = true;
+        persistent-apps = cfg_dock.persistent-apps ++ ["/Applications/Firefox Developer Edition.app"];
+        persistent-others = cfg_dock.persistent-folders;
       };
 
       loginwindow = {

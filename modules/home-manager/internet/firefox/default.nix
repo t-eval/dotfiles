@@ -23,6 +23,16 @@
               }
             ];
           }
+          {
+            name = "Entertainment";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "Youtube";
+                url = "https://www.youtube.com";
+              }
+            ];
+          }
         ];
 
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
