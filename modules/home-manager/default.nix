@@ -11,5 +11,5 @@
     };
   };
 
-  imports = [./shell.nix ./dev-env ./internet];
+  imports = [./dev-env ./internet ./apps];
 }

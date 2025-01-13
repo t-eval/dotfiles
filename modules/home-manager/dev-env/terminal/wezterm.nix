@@ -8,7 +8,7 @@ with lib; let
 in {
   options = {
     dev-env.terminal = {
-      wezterm = mkEnableOption "Whether to enable wezterm terminal";
+      wezterm = mkEnableOption "wezterm";
     };
   };
 

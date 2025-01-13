@@ -14,6 +14,8 @@ return {
       "cpp",
       "yaml",
       "glsl",
+      "markdown",
+      "markdown_inline",
     },
 
     auto_install = false,

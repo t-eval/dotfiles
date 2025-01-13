@@ -81,7 +81,7 @@ in {
         tilesize = 48;
         show-recents = false;
         autohide = true;
-        persistent-apps = cfg_dock.persistent-apps ++ ["/Applications/Firefox Developer Edition.app"];
+        persistent-apps = cfg_dock.persistent-apps ++ ["/Applications/Firefox.app"];
         persistent-others = cfg_dock.persistent-folders;
       };
 

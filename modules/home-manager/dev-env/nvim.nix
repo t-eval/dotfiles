@@ -9,7 +9,7 @@ with lib; let
 in {
   options = {
     dev-env.nvim = with types; {
-      enable = mkEnableOption "Whether to enable neovim";
+      enable = mkEnableOption "neovim";
 
       settings = mkOption {
         default = {};

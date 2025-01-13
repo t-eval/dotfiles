@@ -7,4 +7,6 @@
       email = "bruno.tommaso@protonmail.com";
     };
   };
+
+  apps.obsidian.enable = true;
 }

@@ -8,7 +8,7 @@ with lib; let
 in {
   options = {
     dev-env.terminal = {
-      ghostty = mkEnableOption "Whether to enable ghostty terminal";
+      ghostty = mkEnableOption "ghostty";
     };
   };
 
