@@ -6,6 +6,7 @@ opt.guicursor = ""
 
 opt.smartcase = true
 opt.ignorecase = true
+opt.hlsearch = false
 
 opt.number = true
 opt.relativenumber = true
