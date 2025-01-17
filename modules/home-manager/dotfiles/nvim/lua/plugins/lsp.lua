@@ -41,6 +41,10 @@ return {
         filetypes = { "haskell", "cabal" },
       },
       glsl_analyzer = {},
+
+      -- Typescript development
+      denols = {},
+      ts_ls = {},
     }
 
     local capabilities = require("cmp_nvim_lsp").default_capabilities()

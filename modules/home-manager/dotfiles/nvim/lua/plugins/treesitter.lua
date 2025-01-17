@@ -16,6 +16,7 @@ return {
       "glsl",
       "markdown",
       "markdown_inline",
+      "typescript",
     },
 
     auto_install = false,
