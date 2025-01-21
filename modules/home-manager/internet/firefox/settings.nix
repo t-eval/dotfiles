@@ -43,6 +43,16 @@
   "browser.urlbar.showSearchSuggestionsFirst" = false;
   "browser.urlbar.showSearchTerms.enabled" = false;
   "browser.urlbar.suggest.searches" = false;
+  "browser.urlbar.suggest.history" = false;
+  "browser.urlbar.suggest.clipboard" = false;
+  "browser.urlbar.suggest.openpage" = false;
+  "browser.urlbar.suggest.mdn" = false;
+  "browser.urlbar.suggest.quickactions" = false;
+  "browser.urlbar.suggest.pocket" = false;
+  "browser.urlbar.suggest.weather" = false;
+  "browser.urlbar.suggest.topsites" = false;
+  "browser.urlbar.suggest.trending" = false;
+  "browser.urlbar.suggest.yelp" = false;
   "browser.urlbar.suggest.recentsearches" = false;
 
   ## TODO: Check how to remove the engines suggestion when searching.

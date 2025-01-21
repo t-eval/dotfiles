@@ -43,8 +43,12 @@ return {
       glsl_analyzer = {},
 
       -- Typescript development
-      denols = {},
-      ts_ls = {},
+      denols = {
+        root_dir = lsp.util.root_pattern({ "deno.json" }),
+      },
+      ts_ls = {
+        root_dir = lsp.util.root_pattern({ "package.json", "tsconfig.json" }),
+      },
     }
 
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
