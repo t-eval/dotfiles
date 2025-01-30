@@ -1,5 +1,28 @@
 return {
   {
+    "rebelot/kanagawa.nvim",
+    enabled = true,
+    init = function()
+      vim.cmd.colorscheme("kanagawa")
+    end,
+    opts = {
+      transparent = true,
+      theme = "dragon",
+      colors = {
+        theme = {
+          all = {
+            ui = {
+              bg_gutter = "none",
+              float = {
+                bg = "none",
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  {
     "tjdevries/colorbuddy.nvim",
     enabled = false,
     priority = 1000,
@@ -17,7 +40,7 @@ return {
     opts = {
       terminal_colors = true,
       contrast = "hard",
-      transparent_mode = false,
+      transparent_mode = true,
       overrides = {
         SignColumn = { bg = "NONE" },
       },
@@ -26,6 +49,7 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
+    enabled = false,
     init = function()
       vim.cmd("colorscheme rose-pine")
     end,

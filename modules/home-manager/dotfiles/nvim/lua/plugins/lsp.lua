@@ -44,10 +44,10 @@ return {
 
       -- Typescript development
       denols = {
-        root_dir = lsp.util.root_pattern({ "deno.json" }),
+        root_dir = lsp.util.root_pattern("deno.json"),
       },
       ts_ls = {
-        root_dir = lsp.util.root_pattern({ "package.json", "tsconfig.json" }),
+        root_dir = lsp.util.root_pattern("package.json", "tsconfig.json"),
       },
     }
 
