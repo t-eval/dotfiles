@@ -5,51 +5,7 @@ return {
   },
   config = function()
     local lsp = require("lspconfig")
-
-    local servers = {
-      nixd = {
-        settings = {
-          nixd = {
-            nixpkgs = {
-              expr = "import <nixpkgs> { }",
-            },
-          },
-        },
-      },
-      yamlls = {},
-      lua_ls = {
-        settings = {
-          Lua = {
-            workspace = {
-              library = { vim.env.VIMRUNTIME },
-            },
-            diagnostics = {
-              globals = { "vim" },
-            },
-          },
-        },
-      },
-      zls = {
-        settings = {
-          zls = {
-            enable_build_on_save = true,
-          },
-        },
-      },
-      ccls = {},
-      hls = {
-        filetypes = { "haskell", "cabal" },
-      },
-      glsl_analyzer = {},
-
-      -- Typescript development
-      denols = {
-        root_dir = lsp.util.root_pattern("deno.json"),
-      },
-      ts_ls = {
-        root_dir = lsp.util.root_pattern("package.json", "tsconfig.json"),
-      },
-    }
+    local lsp_configs = require("plugins.configs.lsp")
 
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -70,14 +26,21 @@ return {
 
     vim.diagnostic.config({ virtual_text = true, virtual_lines = false })
 
+    local servers = lsp_configs.get_servers()
+
     for name, config in pairs(servers) do
-      local lsp_config = vim.tbl_deep_extend(
+      if config == true then
+        config = {}
+      end
+
+      config = vim.tbl_deep_extend(
         "force",
-        config,
-        { capabilities = capabilities, on_attach = on_attach }
+        {},
+        { capabilities = capabilities, on_attach = on_attach },
+        config
       )
 
-      lsp[name].setup(lsp_config)
+      lsp[name].setup(config)
     end
   end,
 }

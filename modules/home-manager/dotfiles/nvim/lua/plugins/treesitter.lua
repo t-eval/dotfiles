@@ -13,7 +13,6 @@ return {
       "c",
       "cpp",
       "yaml",
-      "glsl",
       "markdown",
       "markdown_inline",
       "typescript",
