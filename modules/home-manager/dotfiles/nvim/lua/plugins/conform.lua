@@ -8,6 +8,7 @@ return {
       c = { "clang-format" },
       cpp = { "clang-format" },
       yaml = { "yamlfix" },
+      terraform = { "terraform_fmt" },
     },
     format_on_save = {
       timeout_ms = 500,
