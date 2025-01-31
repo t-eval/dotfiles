@@ -3,7 +3,6 @@ return {
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
-      haskell = { "hindent" },
       nix = { "alejandra" },
       zig = { "zigfmt" },
       c = { "clang-format" },

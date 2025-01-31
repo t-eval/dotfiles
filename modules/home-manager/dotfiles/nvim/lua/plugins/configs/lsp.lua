@@ -1,6 +1,5 @@
 local M = {}
 
----@return string[]
 M.get_servers = function()
   return {
     nixd = {
@@ -24,8 +23,15 @@ M.get_servers = function()
         },
       },
     },
+    zls = {
+      settings = {
+        zls = {
+          enable_build_on_save = true,
+        },
+      },
+    },
+    terraformls = true,
     yamlls = true,
-    glsl_analyzer = true,
     ccls = true,
     ts_ls = true,
   }

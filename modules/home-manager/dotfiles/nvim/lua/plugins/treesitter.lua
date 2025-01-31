@@ -7,14 +7,10 @@ return {
     ensure_installed = {
       "lua",
       "nix",
-      "zig",
-      "haskell",
       "cmake",
       "c",
-      "cpp",
+      "zig",
       "yaml",
-      "markdown",
-      "markdown_inline",
       "typescript",
     },
 
