@@ -15,7 +15,7 @@
             bookmarks = [
               {
                 name = "Github";
-                url = "https://www.github.com";
+                url = "https://github.com/novadev-org";
               }
               {
                 name = "Sheets";

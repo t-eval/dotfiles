@@ -12,6 +12,9 @@ return {
       "zig",
       "yaml",
       "typescript",
+      "terraform",
+      "html",
+      "json",
     },
 
     auto_install = false,
