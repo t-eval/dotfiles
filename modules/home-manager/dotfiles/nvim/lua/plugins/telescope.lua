@@ -27,6 +27,7 @@ return {
         git_files = default_opt,
         live_grep = default_opt,
         lsp_references = default_opt,
+        diagnostics = default_opt,
       },
       extensions = {
         fzf = {

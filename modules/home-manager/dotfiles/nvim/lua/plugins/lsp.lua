@@ -22,12 +22,9 @@ return {
       vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, bufopts)
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
       vim.keymap.set("n", "<leader>ct", vim.lsp.buf.type_definition, bufopts)
-
-      -- Diagnostics
-      vim.keymap.set("n", "<leader>do", vim.diagnostic.open_float)
     end
 
-    vim.diagnostic.config({ virtual_text = true, virtual_lines = false })
+    vim.diagnostic.config({ virtual_text = false, virtual_lines = false })
 
     local servers = lsp_configs.get_servers()
 
