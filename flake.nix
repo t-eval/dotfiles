@@ -44,8 +44,7 @@
 
     formatter.${personal-laptop-system} = nixpkgs.legacyPackages.${personal-laptop-system}.alejandra;
 
-    darwinModules = import ./modules/nix-darwin;
+    darwinModules = import ./modules/darwin;
     homeModules = import ./modules/home-manager;
-    nixCommon = import ./modules/nix-core;
   };
 }

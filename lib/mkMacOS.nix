@@ -8,13 +8,14 @@
     homeModule,
     system,
     hostname,
-  }:
+  }: let
+    nixCommon = import ./mkNixCommon.nix {inherit system inputs;};
+  in
     inputs.nix-darwin.lib.darwinSystem {
       specialArgs = {
         inherit system inputs;
       };
       modules = [
-        self.nixCommon
         inputs.nix-homebrew.darwinModules.nix-homebrew
         inputs.home-manager.darwinModules.home-manager
         {
@@ -27,6 +28,7 @@
         }
         self.darwinModules
         macModule
+        nixCommon
       ];
     };
 }
