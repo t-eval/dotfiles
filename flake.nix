@@ -33,8 +33,8 @@
   in {
     darwinConfigurations = with macosLib; {
       personal = mkMacOS {
-        macModule = ./machines/personal-mac/kernel.nix;
-        homeModule = ./machines/personal-mac/home.nix;
+        macModule = ./machines/${personal-laptop-system}/darwin.nix;
+        homeModule = ./machines/${personal-laptop-system}/home.nix;
         hostname = "void";
         system = personal-laptop-system;
       };
