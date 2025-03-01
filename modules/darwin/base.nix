@@ -5,10 +5,10 @@
   ...
 }:
 with lib; let
-  cfg = config.macos.base;
+  cfg = config.darwin.base;
 in {
   options = {
-    macos.base = with types; {
+    darwin.base = with types; {
       timeZone = mkOption {
         type = nullOr str;
         description = "Which timeZone to enable";

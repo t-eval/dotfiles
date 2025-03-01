@@ -4,10 +4,10 @@
   ...
 }:
 with lib; let
-  cfg = config.dev-env.git;
+  cfg = config.coding.git;
 in {
   options = {
-    dev-env.git = with types; {
+    coding.git = with types; {
       username = mkOption {
         type = str;
         description = "Which git username";

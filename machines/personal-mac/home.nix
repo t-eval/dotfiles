@@ -1,5 +1,5 @@
 {...}: {
-  dev-env = {
+  coding = {
     terminal.ghostty = true;
     nvim.enable = true;
     git = {

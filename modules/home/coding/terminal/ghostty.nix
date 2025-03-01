@@ -4,16 +4,16 @@
   ...
 }:
 with lib; let
-  cfg = config.dev-env.terminal;
+  cfg = config.coding.terminal;
 in {
   options = {
-    dev-env.terminal = {
+    coding.terminal = {
       ghostty = mkEnableOption "ghostty";
     };
   };
 
   config = lib.mkIf cfg.ghostty {
-    xdg.configFile."ghostty/config".text = ''
+    xdg.configFile."ghostty/config".text = lib.mkIf cfg.ghostty ''
       background = 000000
       foreground = ffffff
 

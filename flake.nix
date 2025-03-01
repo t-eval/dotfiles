@@ -16,8 +16,6 @@
 
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
-    # ghostty.url = "github:ghostty-org/ghostty";
-
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -42,9 +40,13 @@
       };
     };
 
-    formatter.${personal-laptop-system} = nixpkgs.legacyPackages.${personal-laptop-system}.alejandra;
+    formatter.${personal-laptop-system} =
+      nixpkgs
+      .legacyPackages
+      .${personal-laptop-system}
+      .alejandra;
 
     darwinModules = import ./modules/darwin;
-    homeModules = import ./modules/home-manager;
+    homeModules = import ./modules/home;
   };
 }

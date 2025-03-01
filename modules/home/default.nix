@@ -11,5 +11,5 @@
     };
   };
 
-  imports = [./dev-env ./internet ./apps];
+  imports = [./coding ./internet ./apps];
 }

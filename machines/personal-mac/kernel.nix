@@ -1,7 +1,10 @@
 {pkgs, ...}: {
-  macos = {
+  darwin = {
     dock = {
-      persistent-apps = ["/Applications/Ghostty.app" "${pkgs.obsidian}/Applications/Obsidian.app"];
+      persistent-apps = [
+        "/Applications/Ghostty.app"
+        "${pkgs.obsidian}/Applications/Obsidian.app"
+      ];
     };
 
     homebrew.casks = ["ghostty"];

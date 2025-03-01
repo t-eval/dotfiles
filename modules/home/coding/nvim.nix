@@ -5,10 +5,10 @@
   ...
 }:
 with lib; let
-  cfg = config.dev-env.nvim;
+  cfg = config.coding.nvim;
 in {
   options = {
-    dev-env.nvim = with types; {
+    coding.nvim = with types; {
       enable = mkEnableOption "neovim";
 
       settings = mkOption {
