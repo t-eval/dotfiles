@@ -10,6 +10,7 @@ opt.hlsearch = false
 
 opt.number = true
 opt.relativenumber = true
+opt.colorcolumn = "100"
 
 opt.splitbelow = true
 opt.splitright = true

@@ -4,24 +4,17 @@ return {
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-nvim-lsp",
-    {
-      "L3MON4D3/LuaSnip",
-      version = "v2.*",
-    },
+    "L3MON4D3/LuaSnip",
   },
-  main = "cmp",
   opts = function()
     local cmp = require("cmp")
-    return {
-      snippet = {
-        expand = function(args)
-          require("luasnip").lsp_expand(args.body)
-        end,
-      },
 
+    local bordered_window = cmp.config.window.bordered()
+
+    return {
       window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+        completion = bordered_window,
+        documentation = bordered_window,
       },
 
       mapping = {
@@ -46,6 +39,12 @@ return {
         { name = "path" },
         { name = "buffer", keyword_length = 4 },
       }),
+
+      snippet = {
+        expand = function(args)
+          require("luasnip").lsp_expand(args.body)
+        end,
+      },
     }
   end,
 }

@@ -1,26 +1,15 @@
 return {
-  {
-    "rebelot/kanagawa.nvim",
-    enabled = true,
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme("kanagawa")
-    end,
-    opts = {
-      transparent = true,
-      theme = "dragon",
-      colors = {
-        theme = {
-          all = {
-            ui = {
-              bg_gutter = "none",
-              float = {
-                bg = "none",
-              },
-            },
-          },
-        },
-      },
+  "ellisonleao/gruvbox.nvim",
+  priority = 1000,
+  init = function()
+    vim.o.background = "dark"
+    vim.cmd([[colorscheme gruvbox]])
+  end,
+  opts = {
+    transparent_mode = true,
+    contrast = "hard",
+    overrides = {
+      Function = { fg = "#fabd2f" },
     },
   },
 }
