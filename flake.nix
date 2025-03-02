@@ -14,14 +14,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-
-    # ghostty.url = "github:ghostty-org/ghostty";
-
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    nixvim.url = "github:nix-community/nixvim";
   };
 
   outputs = {
@@ -35,16 +34,20 @@
   in {
     darwinConfigurations = with macosLib; {
       personal = mkMacOS {
-        macModule = ./machines/personal-mac/kernel.nix;
-        homeModule = ./machines/personal-mac/home.nix;
+        macModule = ./machines/${personal-laptop-system}/darwin.nix;
+        homeModule = ./machines/${personal-laptop-system}/home.nix;
         hostname = "void";
         system = personal-laptop-system;
       };
     };
 
-    formatter.${personal-laptop-system} = nixpkgs.legacyPackages.${personal-laptop-system}.alejandra;
+    formatter.${personal-laptop-system} =
+      nixpkgs
+      .legacyPackages
+      .${personal-laptop-system}
+      .alejandra;
 
     darwinModules = import ./modules/darwin;
-    homeModules = import ./modules/home-manager;
+    homeModules = import ./modules/home;
   };
 }

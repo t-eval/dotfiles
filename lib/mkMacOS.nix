@@ -23,7 +23,13 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.${hostname} = {imports = [self.homeModules homeModule];};
+            users.${hostname} = {
+              imports = [
+                self.homeModules
+                inputs.nixvim.homeManagerModules.nixvim
+                homeModule
+              ];
+            };
           };
         }
         self.darwinModules

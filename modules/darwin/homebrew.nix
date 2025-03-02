@@ -4,12 +4,13 @@
   ...
 }:
 with lib; let
-  cfg = config.macos.homebrew;
+  cfg = config.darwin.homebrew;
 in {
   options = {
-    macos.homebrew = with types; {
+    darwin.homebrew = with types; {
       casks = mkOption {
         type = listOf str;
+        default = [];
         description = "Which casks to install with homebrew";
       };
     };

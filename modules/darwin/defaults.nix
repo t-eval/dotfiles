@@ -4,21 +4,21 @@
   ...
 }:
 with lib; let
-  cfg_dock = config.macos.dock;
+  cfg_dock = config.darwin.dock;
 in {
   options = {
-    macos = {
+    darwin = {
       dock = with types; {
         persistent-apps = mkOption {
           type = listOf str;
-          description = "Which apps to always show in the dock";
           default = [];
+          description = "Which apps to always show in the dock";
         };
 
         persistent-folders = mkOption {
           type = listOf str;
-          description = "Which folders to always show in the dock";
           default = [];
+          description = "Which folders to always show in the dock";
         };
       };
     };
