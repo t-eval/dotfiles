@@ -7,6 +7,6 @@
     ./completion.nix
     ./lualine.nix
     ./telescope.nix
-    ./none-ls.nix
+    ./format.nix
   ];
 }

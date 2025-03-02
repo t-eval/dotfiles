@@ -21,7 +21,7 @@ in {
       viAlias = true;
       vimAlias = true;
 
-      extraPackages = with pkgs; [ripgrep];
+      extraPackages = with pkgs; [ripgrep alejandra];
 
       colorschemes.gruvbox = {
         enable = true;
