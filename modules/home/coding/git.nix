@@ -27,8 +27,12 @@ in {
       userEmail = cfg.email;
       userName = cfg.username;
 
+      aliases = {
+        sw = "switch";
+        re = "rebase";
+      };
+
       extraConfig = {
-        pull.rebase = true;
         push.autoSetupRemote = true;
         init.defaultBranch = "main";
       };
