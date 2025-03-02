@@ -1,0 +1,12 @@
+{...}: {
+  imports = [
+    ./oil.nix
+    ./fugitive.nix
+    ./treesitter.nix
+    ./lsp.nix
+    ./completion.nix
+    ./lualine.nix
+    ./telescope.nix
+    ./none-ls.nix
+  ];
+}

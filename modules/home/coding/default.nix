@@ -1,3 +1,3 @@
 {...}: {
-  imports = [./terminal ./git.nix ./nvim.nix ./shell.nix];
+  imports = [./terminal ./nvim ./git.nix ./shell.nix];
 }
