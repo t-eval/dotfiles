@@ -4,6 +4,7 @@
     autoLoad = true;
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       nix
+      c
     ];
 
     settings = {

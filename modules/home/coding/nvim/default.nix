@@ -30,9 +30,6 @@ in {
         settings = {
           transparent_mode = true;
           contrast = "hard";
-          overrides = {
-            Function = {fg = "#fabd2f";};
-          };
         };
       };
     };

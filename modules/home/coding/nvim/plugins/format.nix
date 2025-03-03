@@ -6,6 +6,7 @@
     settings = {
       formatters_by_ft = {
         nix = ["alejandra"];
+        c = ["clang-format"];
       };
 
       format_on_save = {

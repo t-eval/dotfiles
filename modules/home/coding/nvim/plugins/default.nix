@@ -8,5 +8,6 @@
     ./lualine.nix
     ./telescope.nix
     ./format.nix
+    ./fidget.nix
   ];
 }
