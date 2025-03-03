@@ -7,6 +7,7 @@
       formatters_by_ft = {
         nix = ["alejandra"];
         c = ["clang-format"];
+        zig = ["zigfmt"];
       };
 
       format_on_save = {

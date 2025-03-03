@@ -51,6 +51,15 @@
         enable = true;
         package = null;
       };
+      zls = {
+        enable = true;
+        package = null;
+        settings = {
+          zls = {
+            enable_build_on_save = true;
+          };
+        };
+      };
     };
   };
 }

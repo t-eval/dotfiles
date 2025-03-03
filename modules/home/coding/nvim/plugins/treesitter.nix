@@ -5,6 +5,7 @@
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       nix
       c
+      zig
     ];
 
     settings = {
