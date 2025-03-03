@@ -5,7 +5,7 @@
   };
 in {
   programs.nixvim.plugins = {
-    web-devicons.enable = true;
+    web-devicons.enable = false;
 
     telescope = {
       enable = true;

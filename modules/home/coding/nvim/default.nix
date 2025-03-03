@@ -23,6 +23,13 @@ in {
 
       extraPackages = with pkgs; [ripgrep alejandra];
 
+      diagnostics = {
+        virtual_text = true;
+        signs = true;
+        underline = false;
+        virtual_lines = false;
+      };
+
       colorschemes.gruvbox = {
         enable = true;
         autoLoad = true;

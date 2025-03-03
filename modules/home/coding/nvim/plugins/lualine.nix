@@ -5,7 +5,7 @@
 
     settings = {
       options = {
-        icons_enabled = true;
+        icons_enabled = false;
         theme = "auto";
         component_separators = {
           left = "|";
