@@ -1,4 +1,9 @@
-{...}: {
+{...}: let
+  bordered_window = {
+    border = "rounded";
+    winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None";
+  };
+in {
   programs.nixvim.plugins = {
     cmp = {
       enable = true;
@@ -34,6 +39,11 @@
               { "i", "c" }
             )
           '';
+        };
+
+        window = {
+          completion = bordered_window;
+          documentation = bordered_window;
         };
 
         snippet = {

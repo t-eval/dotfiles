@@ -9,5 +9,6 @@
     ./telescope.nix
     ./format.nix
     ./fidget.nix
+    ./lint.nix
   ];
 }
