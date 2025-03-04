@@ -22,6 +22,7 @@
 
       wrap = true;
       linebreak = true;
+      scrolloff = 10;
 
       tabstop = 2;
       shiftwidth = 2;
