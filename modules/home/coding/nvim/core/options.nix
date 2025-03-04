@@ -5,9 +5,8 @@
     };
 
     opts = {
-      inccommand = "split";
-      termguicolors = true;
       guicursor = "";
+      termguicolors = true;
 
       smartcase = true;
       ignorecase = true;
@@ -16,23 +15,20 @@
       number = true;
       relativenumber = true;
       colorcolumn = "100";
+      signcolumn = "yes";
 
       splitbelow = true;
       splitright = true;
-
-      signcolumn = "yes";
 
       wrap = true;
       linebreak = true;
 
       tabstop = 2;
-      expandtab = true;
       shiftwidth = 2;
+      expandtab = true;
       smartindent = true;
 
-      more = false;
-      foldmethod = "manual";
-
+      clipboard = "unnamedplus";
       completeopt = ["menu" "menuone" "noselect"];
     };
   };

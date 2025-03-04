@@ -35,8 +35,10 @@ in {
         autoLoad = true;
 
         settings = {
-          transparent_mode = true;
           contrast = "hard";
+          overrides = {
+            SignColumn = {bg = "none";};
+          };
         };
       };
     };

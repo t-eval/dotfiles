@@ -40,11 +40,6 @@
           nixpkgs = {
             expr = "import <nixpkgs> { }";
           };
-          options = {
-            "nix-darwin" = {
-              expr = "(builtins.getFlake \"/Users/void/git/dotfiles\").darwinConfigurations.personal.options";
-            };
-          };
         };
       };
       clangd = {
