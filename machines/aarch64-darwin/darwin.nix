@@ -7,6 +7,8 @@
       ];
     };
 
+    base.useTouchIdForSudo = true;
+
     homebrew.casks = ["ghostty"];
   };
 }
