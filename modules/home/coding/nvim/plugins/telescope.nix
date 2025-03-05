@@ -18,6 +18,14 @@ in {
         "<leader>fb" = "git_branches";
       };
 
+      luaConfig.post = ''
+        local bufopts = { noremap = true, silent = true, buffer = bufnr }
+
+        local builtin = require("telescope.builtin")
+        vim.keymap.set("n", "<leader>gd", builtin.lsp_definitions, bufopts)
+        vim.keymap.set("n", "<leader>gr", builtin.lsp_references, bufopts)
+      '';
+
       extensions = {
         fzf-native = {
           enable = true;

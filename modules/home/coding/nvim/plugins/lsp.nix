@@ -9,6 +9,8 @@
         "<leader>cr" = "rename";
         "<leader>ca" = "code_action";
         "<leader>ct" = "type_definition";
+        "<leader>cd" = "definition";
+        "<leader>ci" = "implementation";
       };
       silent = true;
     };
