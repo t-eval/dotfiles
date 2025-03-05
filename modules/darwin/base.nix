@@ -26,6 +26,7 @@ in {
   config = {
     time.timeZone = cfg.timeZone;
     security.pam.services.sudo_local.touchIdAuth = cfg.useTouchIdForSudo;
+    documentation.man.enable = true;
 
     programs.zsh.enable = true;
     environment = {
