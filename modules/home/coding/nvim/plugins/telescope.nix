@@ -19,11 +19,16 @@ in {
       };
 
       luaConfig.post = ''
-        local bufopts = { noremap = true, silent = true, buffer = bufnr }
+        vim.api.nvim_create_autocmd('LspAttach', {
+          group = vim.api.nvim_create_augroup('UserLspConfig', { clear = true }),
+          callback = function(ev)
+            local bufopts = { noremap = true, silent = true, buffer = ev.buf }
 
-        local builtin = require("telescope.builtin")
-        vim.keymap.set("n", "<leader>gd", builtin.lsp_definitions, bufopts)
-        vim.keymap.set("n", "<leader>gr", builtin.lsp_references, bufopts)
+            local builtin = require("telescope.builtin")
+            vim.keymap.set("n", "<leader>gd", builtin.lsp_definitions, bufopts)
+            vim.keymap.set("n", "<leader>gr", builtin.lsp_references, bufopts)
+          end
+        })
       '';
 
       extensions = {
