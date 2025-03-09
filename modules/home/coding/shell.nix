@@ -1,10 +1,5 @@
 {...}: {
   programs = {
-    starship = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
     zsh = {
       enable = true;
 
@@ -19,6 +14,20 @@
       };
 
       syntaxHighlighting.enable = true;
+    };
+
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+      settings = {
+        add_newline = false;
+        format = "$username$hostname$directory$git_branch$c$shell$character";
+
+        username.show_always = true;
+        c = {
+          format = "via [$name $version](bold blue)";
+        };
+      };
     };
   };
 }
