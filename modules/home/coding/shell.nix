@@ -21,11 +21,17 @@
       enableZshIntegration = true;
       settings = {
         add_newline = false;
-        format = "$username$hostname$directory$git_branch$c$shell$character";
+        format = ''
+          $username$hostname$directory$git_branch$c
+          [└─>](bold yellow)$character
+        '';
 
         username.show_always = true;
         c = {
           format = "via [$name $version](bold blue)";
+        };
+        character = {
+          format = " ";
         };
       };
     };

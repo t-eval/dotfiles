@@ -35,7 +35,9 @@ in {
         autoLoad = true;
 
         settings = {
-          contrast = "hard";
+          contrast = "soft";
+          transparent_mode = true;
+          terminal_colors = true;
           overrides = {
             SignColumn = {bg = "none";};
           };
