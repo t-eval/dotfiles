@@ -8,10 +8,10 @@ structured for maintainability and customization.
 
 ## Zsh
 <picture>
-  <img src=".github/assets/zsh-shell.png" width="30%" />
+  <img src="assets/zsh-shell.png" width="30%" />
 </picture>
 
 ## Nvim
 <picture>
-  <img src=".github/assets/nvim.png" />
+  <img src="assets/nvim.png" />
 </picture>
