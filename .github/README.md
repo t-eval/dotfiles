@@ -6,12 +6,13 @@ environment across machines effortlessly.
 These dotfiles contain my personal Nix modules, shell configurations, and system settings, all 
 structured for maintainability and customization.
 
-## Zsh
-<picture>
-  <img src="assets/zsh-shell.png" width="30%" />
-</picture>
+## Dev env
+<div style="display:flex; align-items: center; justify-content: space-around;">
+ <picture>
+   <img src="assets/zsh-shell.png" />
+ </picture>
 
-## Nvim
-<picture>
-  <img src="assets/nvim.png" />
-</picture>
+ <picture>
+   <img src="assets/nvim.png" />
+ </picture>
+</div>
