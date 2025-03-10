@@ -7,12 +7,9 @@ These dotfiles contain my personal Nix modules, shell configurations, and system
 structured for maintainability and customization.
 
 ## Dev env
-<div style="display:flex; align-items: center; justify-content: space-around;">
- <picture>
-   <img src="assets/zsh-shell.png" />
- </picture>
-
- <picture>
-   <img src="assets/nvim.png" />
- </picture>
-</div>
+<picture>
+ <img src="assets/zsh-shell.png" width="40%" />
+</picture>
+I use Zsh as my shell, paired with Starship for a fast and highly customizable prompt. 
+Starship provides a minimal and informative prompt, while Zsh enhances my workflow with powerful
+features like autocomplete and syntax highlighting.
