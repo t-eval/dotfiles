@@ -13,7 +13,7 @@
         ls = "ls -al --color=auto";
       };
 
-      syntaxHighlighting.enable = true;
+      #syntaxHighlighting.enable = true;
     };
 
     starship = {
