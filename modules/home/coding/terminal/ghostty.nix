@@ -19,7 +19,7 @@ in {
 
       font-family = Berkeley Mono
       font-size = 13
-      #font-thicken = true
+      font-thicken = true
       #font-style = Bold
       #font-style-italic = Bold Italic
 
