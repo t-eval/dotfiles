@@ -8,32 +8,35 @@
         name = "void";
         settings = import ./settings.nix;
 
-        bookmarks = [
-          {
-            name = "Default";
-            toolbar = true;
-            bookmarks = [
-              {
-                name = "Github";
-                url = "https://github.com";
-              }
-              {
-                name = "Sheets";
-                url = "https://docs.google.com/spreadsheets";
-              }
-            ];
-          }
-          {
-            name = "Entertainment";
-            toolbar = true;
-            bookmarks = [
-              {
-                name = "Youtube";
-                url = "https://www.youtube.com";
-              }
-            ];
-          }
-        ];
+        bookmarks = {
+          force = true;
+          settings = [
+            {
+              name = "Default";
+              toolbar = true;
+              bookmarks = [
+                {
+                  name = "Github";
+                  url = "https://github.com";
+                }
+                {
+                  name = "Sheets";
+                  url = "https://docs.google.com/spreadsheets";
+                }
+              ];
+            }
+            {
+              name = "Entertainment";
+              toolbar = true;
+              bookmarks = [
+                {
+                  name = "Youtube";
+                  url = "https://www.youtube.com";
+                }
+              ];
+            }
+          ];
+        };
 
         extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
           ublock-origin
@@ -42,12 +45,12 @@
 
         search = {
           force = true;
-          default = "Google";
-          order = ["Google"];
+          default = "google";
+          order = ["google"];
 
           engines = {
-            "YouTube" = {
-              iconUpdateURL = "https://youtube.com/favicon.ico";
+            "youTube" = {
+              icon = "https://youtube.com/favicon.ico";
               updateInterval = 24 * 60 * 60 * 1000;
               definedAliases = ["@yt"];
               urls = [
@@ -63,11 +66,11 @@
               ];
             };
 
-            "Bing".metaData.hidden = true;
-            "eBay".metaData.hidden = true;
-            "Wikipedia (en)".metaData.hidden = true;
-            "History".metaData.hidden = true;
-            "Google".metaData.alias = "@g";
+            "bing".metaData.hidden = true;
+            "ebay".metaData.hidden = true;
+            "wikipedia".metaData.hidden = true;
+            "history".metaData.hidden = true;
+            "google".metaData.alias = "@g";
           };
         };
       };
