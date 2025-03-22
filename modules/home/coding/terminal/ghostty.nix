@@ -20,8 +20,8 @@ in {
       font-family = Berkeley Mono
       font-size = 13
       font-thicken = true
-      #font-style = Bold
-      #font-style-italic = Bold Italic
+      font-style = Bold
+      font-style-italic = Bold Italic
 
 
       window-padding-balance = true
