@@ -13,6 +13,11 @@ in {
         default = [];
         description = "Which casks to install with homebrew";
       };
+      masApps = mkOption {
+        type = attrsOf ints.positive;
+        default = {};
+        description = "Which MacOS apps to install with hombrew";
+      };
     };
   };
 
@@ -31,6 +36,7 @@ in {
         cleanup = "zap";
         upgrade = true;
       };
+      masApps = cfg.masApps;
       casks = cfg.casks ++ ["firefox"];
     };
   };
