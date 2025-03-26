@@ -26,10 +26,6 @@ in {
 
       window-padding-balance = true
       window-padding-x = 10
-      #window-width = 130
-      #window-height = 40
-      #window-position-x = 225
-      #window-position-y = 121
       maximize = true
     '';
   };

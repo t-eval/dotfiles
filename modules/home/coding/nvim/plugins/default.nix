@@ -10,5 +10,6 @@
     ./format.nix
     ./fidget.nix
     ./lint.nix
+    ./indent-line.nix
   ];
 }
