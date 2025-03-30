@@ -4,7 +4,7 @@
 
   home = {
     sessionPath = ["/opt/homebrew/bin"];
-    stateVersion = "24.11";
+    stateVersion = "25.05";
     sessionVariables = {
       EDITOR = "nvim";
       LANG = "ko_KR.UTF-8";
