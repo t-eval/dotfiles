@@ -26,7 +26,7 @@ in {
 
   config = {
     system = {
-      stateVersion = 5;
+      stateVersion = 6;
       keyboard = {
         enableKeyMapping = true;
         remapCapsLockToEscape = true;
