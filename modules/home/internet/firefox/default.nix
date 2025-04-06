@@ -33,6 +33,10 @@
                   name = "Youtube";
                   url = "https://www.youtube.com";
                 }
+                {
+                  name = "PsnProfile";
+                  url = "https://psnprofiles.com/t_eval";
+                }
               ];
             }
           ];
