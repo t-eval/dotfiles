@@ -32,7 +32,7 @@ in {
 
       colorschemes = {
         rose-pine = {
-          enable = true;
+          enable = false;
           autoLoad = true;
 
           settings = {
@@ -48,7 +48,7 @@ in {
         };
 
         gruvbox = {
-          enable = false;
+          enable = true;
           autoLoad = true;
 
           settings = {
