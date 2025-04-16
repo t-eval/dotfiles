@@ -31,7 +31,7 @@ in {
     programs.zsh.enable = true;
     environment = {
       shells = [pkgs.zsh];
-      systemPackages = with pkgs; [vim];
+      systemPackages = with pkgs; [vim man];
     };
   };
 }

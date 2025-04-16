@@ -15,13 +15,14 @@ in {
   config = lib.mkIf cfg.ghostty {
     xdg.configFile."ghostty/config".text = ''
       #theme = GruvboxDarkHard
-      background = 111111
+      #background = 111111
+      background = 000000
 
       font-family = Berkeley Mono
       font-size = 13
       font-thicken = true
-      font-style = Bold
-      font-style-italic = Bold Italic
+      #font-style = Bold
+      #font-style-italic = Bold Italic
 
 
       window-padding-balance = true

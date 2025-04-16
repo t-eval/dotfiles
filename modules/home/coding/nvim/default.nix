@@ -30,14 +30,32 @@ in {
         virtual_lines = false;
       };
 
-      colorschemes.gruvbox = {
-        enable = true;
-        autoLoad = true;
+      colorschemes = {
+        rose-pine = {
+          enable = true;
+          autoLoad = true;
 
-        settings = {
-          contrast = "hard";
-          transparent_mode = true;
-          terminal_colors = true;
+          settings = {
+            variant = "main";
+            dark_variant = "main";
+            extend_background_behind_borders = true;
+            styles = {
+              bold = true;
+              italic = true;
+              transparency = true;
+            };
+          };
+        };
+
+        gruvbox = {
+          enable = false;
+          autoLoad = true;
+
+          settings = {
+            contrast = "hard";
+            transparent_mode = true;
+            terminal_colors = true;
+          };
         };
       };
     };
