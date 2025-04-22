@@ -14,6 +14,7 @@ in {
   };
 
   config = mkIf cfg.enable {
+    stylix.targets.nixvim.enable = true;
     programs.nixvim = {
       enable = true;
       enableMan = true;
@@ -21,7 +22,10 @@ in {
       viAlias = true;
       vimAlias = true;
 
-      extraPackages = with pkgs; [ripgrep alejandra];
+      extraPackages = with pkgs; [
+        ripgrep
+        alejandra
+      ];
 
       diagnostics = {
         virtual_text = true;
@@ -30,36 +34,19 @@ in {
         virtual_lines = false;
       };
 
-      colorschemes = {
-        rose-pine = {
-          enable = false;
-          autoLoad = true;
-
-          settings = {
-            variant = "main";
-            dark_variant = "main";
-            extend_background_behind_borders = true;
-            styles = {
-              bold = true;
-              italic = true;
-              transparency = true;
-            };
-          };
-        };
-
-        gruvbox = {
-          enable = true;
-          autoLoad = true;
-
-          settings = {
-            contrast = "hard";
-            transparent_mode = true;
-            terminal_colors = true;
-          };
-        };
+      highlightOverride = {
+        SignColumn.bg = "none";
+        LineNr.bg = "none";
+        LineNrAbove.bg = "none";
+        LineNrBelow.bg = "none";
+        FoldColumn.bg = "none";
+        CursorLineNr.bg = "none";
       };
     };
   };
 
-  imports = [./core ./plugins];
+  imports = [
+    ./core
+    ./plugins
+  ];
 }

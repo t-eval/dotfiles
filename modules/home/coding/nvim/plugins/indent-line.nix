@@ -5,6 +5,9 @@
 
     settings = {
       scope.enabled = false;
+      indent = {
+        char = "~";
+      };
     };
   };
 }

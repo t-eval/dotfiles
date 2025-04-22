@@ -1,3 +1,6 @@
 {...}: {
-  imports = [./ghostty.nix ./wezterm.nix];
+  imports = [
+    ./ghostty.nix
+    ./wezterm.nix
+  ];
 }

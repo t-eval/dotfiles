@@ -1,4 +1,6 @@
 {pkgs, ...}: {
+  networking.hostName = "pwn";
+
   darwin = {
     dock = {
       persistent-apps = [

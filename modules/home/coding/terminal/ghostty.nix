@@ -13,21 +13,20 @@ in {
   };
 
   config = lib.mkIf cfg.ghostty {
-    xdg.configFile."ghostty/config".text = ''
-      #theme = GruvboxDarkHard
-      #background = 111111
-      background = 000000
+    stylix.targets.ghostty.enable = true;
 
-      font-family = Berkeley Mono
-      font-size = 13
-      font-thicken = true
-      #font-style = Bold
-      #font-style-italic = Bold Italic
+    programs.ghostty = {
+      enable = true;
+      package = null; # Broken on darwin systems
 
-
-      window-padding-balance = true
-      window-padding-x = 10
-      maximize = true
-    '';
+      enableZshIntegration = true;
+      settings = {
+        font-family = lib.mkForce "Berkeley Mono";
+        font-thicken = true;
+        window-padding-balance = true;
+        window-padding-x = 10;
+        maximize = true;
+      };
+    };
   };
 }

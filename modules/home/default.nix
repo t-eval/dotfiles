@@ -11,5 +11,9 @@
     };
   };
 
-  imports = [./coding ./internet ./apps];
+  imports = [
+    ./coding
+    ./internet
+    ./apps
+  ];
 }

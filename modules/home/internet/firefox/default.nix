@@ -1,4 +1,10 @@
 {pkgs, ...}: {
+  stylix.targets.firefox = {
+    enable = true;
+    firefoxGnomeTheme.enable = true;
+    profileNames = ["default"];
+  };
+
   programs.firefox = {
     enable = true;
     package = null;
@@ -42,10 +48,12 @@
           ];
         };
 
-        extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
-          ublock-origin
-          proton-pass
-        ];
+        extensions = {
+          packages = with pkgs.nur.repos.rycee.firefox-addons; [
+            ublock-origin
+            proton-pass
+          ];
+        };
 
         search = {
           force = true;
