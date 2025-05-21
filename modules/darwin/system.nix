@@ -27,6 +27,7 @@ in {
   config = {
     system = {
       stateVersion = 6;
+      primaryUser = "void";
       keyboard = {
         enableKeyMapping = true;
         remapCapsLockToEscape = true;

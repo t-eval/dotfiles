@@ -6,7 +6,7 @@
 
       shellAliases = {
         # Nix
-        nixs = "/run/current-system/sw/bin/darwin-rebuild switch --flake ~/git/dotfiles#personal";
+        nixs = "sudo /run/current-system/sw/bin/darwin-rebuild switch --flake ~/git/dotfiles#personal";
         nd = "nix develop -c $SHELL";
         nb = "nix build";
 

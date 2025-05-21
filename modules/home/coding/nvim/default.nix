@@ -27,7 +27,7 @@ in {
         alejandra
       ];
 
-      diagnostics = {
+      diagnostic.settings = {
         virtual_text = true;
         signs = true;
         underline = false;
