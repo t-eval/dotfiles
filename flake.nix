@@ -15,8 +15,6 @@
 
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     nixvim.url = "github:nix-community/nixvim";
-
-    stylix.url = "github:danth/stylix";
   };
 
   outputs = {

@@ -1,10 +1,4 @@
 {pkgs, ...}: {
-  stylix.targets.firefox = {
-    enable = true;
-    firefoxGnomeTheme.enable = true;
-    profileNames = ["default"];
-  };
-
   programs.firefox = {
     enable = true;
     package = null;

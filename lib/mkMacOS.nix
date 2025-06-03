@@ -27,7 +27,6 @@
               imports = [
                 self.homeModules
                 inputs.nixvim.homeManagerModules.nixvim
-                inputs.stylix.homeManagerModules.stylix
                 homeModule
               ];
             };

@@ -14,7 +14,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    stylix.targets.nixvim.enable = true;
     programs.nixvim = {
       enable = true;
       enableMan = true;
@@ -34,13 +33,14 @@ in {
         virtual_lines = false;
       };
 
-      highlightOverride = {
-        SignColumn.bg = "none";
-        LineNr.bg = "none";
-        LineNrAbove.bg = "none";
-        LineNrBelow.bg = "none";
-        FoldColumn.bg = "none";
-        CursorLineNr.bg = "none";
+      colorschemes = {
+        gruvbox = {
+          enable = true;
+          settings = {
+            terminal_colors = true;
+            transparent_mode = true;
+          };
+        };
       };
     };
   };

@@ -1,5 +1,4 @@
 {...}: {
-  stylix.targets.starship.enable = true;
   programs = {
     zsh = {
       enable = true;
@@ -24,11 +23,11 @@
         add_newline = false;
         format = "\\[$hostname@$directory\\]$git_branch$character";
 
-        git_branch.format = "[\\($branch\\)](bold base12)";
-        directory.format = "[$path](bold base14)";
+        git_branch.format = "[\\($branch\\)](bold red)";
+        directory.format = "[$path](bold yellow)";
         hostname = {
           ssh_only = false;
-          format = "[$hostname](bold base14)";
+          format = "[$hostname](bold yellow)";
         };
         character.format = "# ";
       };
