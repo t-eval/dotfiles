@@ -24,7 +24,8 @@ in {
         font-style-italic = "Bold Italic";
         font-thicken = true;
         font-size = 13;
-        background = 111111;
+        #background = 111111;
+        background = "#000000";
         window-padding-balance = true;
         window-padding-x = 10;
         maximize = true;
