@@ -1,16 +1,13 @@
-{...}: {
+{...}: let
+  cmp_sources = ["nvim_lsp" "luasnip" "path" "buffer"];
+in {
   programs.nixvim.plugins = {
     cmp = {
       enable = true;
       autoLoad = true;
       autoEnableSources = false;
       settings = {
-        sources = [
-          {name = "nvim_lsp";}
-          {name = "luasnip";}
-          {name = "path";}
-          {name = "buffer";}
-        ];
+        sources = map (s: {name = s;}) cmp_sources;
 
         mapping = {
           "<C-n>" = ''

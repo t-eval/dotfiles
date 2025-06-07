@@ -1,12 +1,12 @@
 {...}: {
   programs.nixvim.plugins.indent-blankline = {
-    enable = false;
+    enable = true;
     autoLoad = true;
 
     settings = {
       scope.enabled = false;
       indent = {
-        char = "~";
+        highlight = ["Whitespace"];
       };
     };
   };
