@@ -19,7 +19,8 @@ in {
 
       enableZshIntegration = true;
       settings = {
-        font-family = "Berkeley Mono";
+        #font-family = "Berkeley Mono";
+        font-family = "SF Mono";
         font-style = "Bold";
         font-style-italic = "Bold Italic";
         font-thicken = true;
