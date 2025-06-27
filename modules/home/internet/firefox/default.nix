@@ -51,8 +51,8 @@
 
         search = {
           force = true;
-          default = "google";
-          order = ["google"];
+          default = "duckduckgo";
+          order = ["duckduckgo"];
 
           engines = {
             "youTube" = {
@@ -76,7 +76,7 @@
             "ebay".metaData.hidden = true;
             "wikipedia".metaData.hidden = true;
             "history".metaData.hidden = true;
-            "google".metaData.alias = "@g";
+            "google".metaData.hidden = true;
           };
         };
       };

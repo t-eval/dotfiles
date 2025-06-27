@@ -21,7 +21,7 @@
   "browser.safebrowsing.downloads.remote.enabled" = false;
   "browser.safebrowsing.appRepURL" = "";
   "browser.safebrowsing.malware.enabled" = false;
-  "browser.startup.homepage" = "about:blank";
+  "browser.startup.homepage" = "https://start.duckduckgo.com/";
   "browser.warnOnQuit" = false;
   "browser.newtabpage.enabled" = false;
   "browser.newtabpage.introShown" = false;

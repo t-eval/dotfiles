@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  networking.hostName = "pwn";
+  networking.hostName = "void";
 
   darwin = {
     dock = {
