@@ -1,4 +1,9 @@
-{...}: {
+{...}: let
+  defaultNull = {
+    enable = false;
+    package = null;
+  };
+in {
   programs.nixvim.plugins.lsp = {
     enable = true;
     autoLoad = true;
@@ -23,10 +28,7 @@
           };
         };
       };
-      clangd = {
-        enable = true;
-        package = null;
-      };
+      clangd = defaultNull;
       zls = {
         enable = true;
         package = null;
@@ -34,6 +36,25 @@
           zls = {
             enable_build_on_save = true;
           };
+        };
+      };
+      ts_ls = {
+        enable = false;
+        package = null;
+      };
+
+      # IAC
+      terraformls = {
+        enable = true;
+        package = null;
+      };
+
+      # Web
+      volar = {
+        enable = true;
+        package = null;
+        settings = {
+          filetypes = ["vue" "typescript" "javascript"];
         };
       };
     };

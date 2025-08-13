@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  hostname,
   ...
 }:
 with lib; let
@@ -27,7 +28,7 @@ in {
   config = {
     system = {
       stateVersion = 6;
-      primaryUser = "void";
+      primaryUser = hostname;
       keyboard = {
         enableKeyMapping = true;
         remapCapsLockToEscape = true;

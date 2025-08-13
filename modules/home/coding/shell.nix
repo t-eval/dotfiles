@@ -21,14 +21,18 @@
       enableZshIntegration = true;
       settings = {
         add_newline = false;
-        format = "\\[$hostname@$directory\\]$git_branch$character";
+        format = "\\[$hostname@$directory$nix_shell\\]$git_branch$character";
 
         git_branch.format = "[\\($branch\\)](bold red)";
-        directory.format = "[$path](bold yellow)";
+        directory = {
+          truncation_length = 1;
+          format = "[$path](bold yellow)";
+        };
         hostname = {
           ssh_only = false;
           format = "[$hostname](bold yellow)";
         };
+        nix_shell.format = "[*$name](bold blue)";
         character.format = "# ";
       };
     };

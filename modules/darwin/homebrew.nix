@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  hostname,
   ...
 }:
 with lib; let
@@ -24,7 +25,7 @@ in {
   config = {
     nix-homebrew = {
       enable = true;
-      user = "void";
+      user = hostname;
       enableRosetta = true;
       autoMigrate = true;
     };

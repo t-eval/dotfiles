@@ -17,28 +17,19 @@
     nixvim.url = "github:nix-community/nixvim";
   };
 
-  outputs = {
-    nixpkgs,
-    self,
-    ...
-  } @ inputs: let
-    macosLib = import ./lib/mkMacOS.nix {inherit self inputs;};
-
-    personal-laptop-system = "aarch64-darwin";
-  in {
-    darwinConfigurations = with macosLib; {
-      personal = mkMacOS {
-        macModule = ./hosts/macos-laptop/darwin.nix;
-        homeModule = ./hosts/macos-laptop/home.nix;
-        hostname = "void";
-        system = personal-laptop-system;
+  outputs = {self, ...} @ inputs: let
+    os_lib = import ./lib/mkOS.nix {inherit self inputs;};
+  in
+    with os_lib; {
+      darwinConfigurations = {
+        personal = mkMacOS {
+          macModule = ./hosts/macos-laptop/darwin.nix;
+          homeModule = ./hosts/macos-laptop/home.nix;
+          hostname = "void";
+        };
       };
+
+      darwinModules = import ./modules/darwin;
+      homeModules = import ./modules/home;
     };
-
-    formatter.${personal-laptop-system} =
-      nixpkgs.legacyPackages.${personal-laptop-system}.alejandra;
-
-    darwinModules = import ./modules/darwin;
-    homeModules = import ./modules/home;
-  };
 }

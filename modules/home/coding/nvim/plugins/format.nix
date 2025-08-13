@@ -8,6 +8,7 @@
         nix = ["alejandra"];
         c = ["clang-format"];
         zig = ["zigfmt"];
+        terraform = ["terraform_fmt"];
       };
 
       format_on_save = {

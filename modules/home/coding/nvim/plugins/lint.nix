@@ -6,6 +6,10 @@
     lintersByFt = {
       c = ["clangtidy"];
       nix = ["nix"];
+      vue = ["eslint"];
+      typescript = ["eslint"];
+      javascript = ["eslint"];
+      terraform = ["tflint"];
     };
   };
 }
